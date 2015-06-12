@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<robot name="hexaglide">
+  <link name="base_link" />
+  <link name="link1" />
+  <link name="link2" />
+  <link name="link3" />
+  <link name="link4" />
+  <link name="link5" />
+  <link name="link6" />
+
+  <joint name="joint1" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5"/>
+    <origin rpy="0 -1.57075 0" xyz="0 0 2"/>
+  </joint>
+
+  <joint name="joint2" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link2"/>
+    <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5"/>
+    <origin rpy="0 -1.57075 0" xyz="1 0 2"/>
+  </joint>
+
+  <joint name="joint3" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link3"/>
+    <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5"/>
+    <origin rpy="0 -1.57075 0" xyz="2 0 2"/>
+  </joint>
+
+  <joint name="joint4" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link4"/>
+    <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5"/>
+    <origin rpy="0 -1.57075 0" xyz="3 0 2"/>
+  </joint>
+
+  <joint name="joint5" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link5"/>
+    <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5"/>
+    <origin rpy="0 -1.57075 0" xyz="4 0 2"/>
+  </joint>
+
+  <joint name="joint6" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link6"/>
+    <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5"/>
+    <origin rpy="0 -1.57075 0" xyz="5 0 2"/>
+  </joint>
+
+</robot>
