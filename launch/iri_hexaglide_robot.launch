@@ -1,13 +1,13 @@
 <launch>
 
     <arg name="hexaglide"    default="hexaglide" />
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find hexaglide)/xacro/$(arg hexaglide).urdf.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find iri_hexaglide)/xacro/$(arg hexaglide).urdf.xacro'" />
 
     <node pkg="iri_hexaglide" type="iri_hexaglide" name="iri_hexaglide" output="screen">
 	<remap from="/iri_hexaglide/joint_state" to="/joint_states"/>
     </node>
 
-    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen">
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
     </node>		
 
 </launch>
